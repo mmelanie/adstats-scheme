@@ -1,0 +1,113 @@
+*! version 1.0.0  08nov2026
+*! scheme-adstats -- AdStats scheme, matching the "Survey Research Report" Canva deck
+*!   pale mint background, black text, thin black rules, teal/blue/gold/lavender accents
+*!   usage: set scheme adstats   (or  , scheme(adstats) on any graph)
+
+#include s2color
+
+sequence 1201
+label "AdStats"
+
+* ------------------------------------------------------------------
+* Background: one flat pale-mint surface, no boxes or frames
+* ------------------------------------------------------------------
+color background         "238 247 244"
+color foreground         black
+color plotregion         "238 247 244"
+color plotregion_line    "238 247 244"
+color matrix_plotregion  "238 247 244"
+color legend             "238 247 244"
+color legend_line        "238 247 244"
+color box                "238 247 244"
+color textbox            "238 247 244"
+color text_option_fill   "238 247 244"
+color pbarlabelfill      "238 247 244"
+
+* ------------------------------------------------------------------
+* Text: everything black, like the slides
+* ------------------------------------------------------------------
+color heading      black
+color subheading   black
+color text         black
+color body         black
+color small_body   "70 70 70"
+color axis_title   black
+color label        black
+color key_label    black
+color tick_label   black
+color tick_biglabel black
+
+gsize heading      vlarge
+gsize subheading   medlarge
+gsize axis_title   medsmall
+gsize tick_label   small
+gsize key_label    small
+
+* Left-aligned titles (deck headers sit top-left above a rule)
+clockdir title_position     11
+clockdir subtitle_position  11
+horizontal heading          west
+horizontal subheading       west
+clockdir caption_position   7
+clockdir note_position      7
+
+* ------------------------------------------------------------------
+* Axes and grid: thin black axis lines, faint mint horizontal grid only
+* ------------------------------------------------------------------
+color axisline     black
+color tick         black
+color minortick    black
+linewidth axisline thin
+linewidth tick     thin
+
+color grid         "206 230 223"
+color major_grid   "206 230 223"
+color minor_grid   "206 230 223"
+linewidth grid       thin
+linewidth major_grid thin
+linepattern major_grid solid
+
+axisstyle horizontal_default  horizontal_nogrid
+axisstyle vertical_default    vertical_withgrid
+anglestyle vertical_tick      horizontal
+
+* ------------------------------------------------------------------
+* Legend: bottom, single row, frameless
+* ------------------------------------------------------------------
+clockdir legend_position  6
+numstyle legend_cols      4
+numstyle legend_rows      0
+
+* ------------------------------------------------------------------
+* Series palette, pulled from the slide gradients
+* ------------------------------------------------------------------
+color p1   "43 168 140"     // teal
+color p2   "74 123 208"     // cornflower blue
+color p3   "229 186 72"     // warm gold
+color p4   "142 122 214"    // lavender
+color p5   "20 20 20"       // ink black
+color p6   "128 214 192"    // light mint
+color p7   "150 182 236"    // light blue
+color p8   "240 214 140"    // light gold
+color p9   "190 178 236"    // light lavender
+color p10  "120 120 120"    // grey
+color p11  "28 110 92"      // dark teal
+color p12  "40 74 150"      // dark blue
+color p13  "176 132 28"     // dark gold
+color p14  "96 74 170"      // dark lavender
+color p15  "180 180 180"    // light grey
+
+linewidth p      medthick
+symbolsize p     medium
+
+* Confidence intervals and reference lines
+color ci_line      "43 168 140"
+color ci_area      "198 236 226"
+color ci_arealine  "198 236 226"
+color xyline       black
+color refline      black
+linewidth refline  thin
+
+* Histogram in the deck's teal
+color histogram       "43 168 140"
+color histogram_line  "238 247 244"
