@@ -46,8 +46,8 @@ gsize key_label    small
 * Left-aligned titles (deck headers sit top-left above a rule)
 clockdir title_position     11
 clockdir subtitle_position  11
-horizontal heading          west
-horizontal subheading       west
+horizontal heading          left
+horizontal subheading       left
 clockdir caption_position   7
 clockdir note_position      7
 
